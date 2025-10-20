@@ -1,13 +1,22 @@
 /* style.css */
-body {
+html, body {
+    height: 100%; /* Zorgt dat body en html volledige hoogte van het scherm gebruiken */
+    width: 100%;  /* Optioneel, zorgt dat het volledige schermbreedte gebruikt */
+    margin: 0;
+    padding: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #fdf6e3;
     color: #333;
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Zorgt dat body minimaal schermhoogte heeft */
+}
+
+/* Header */
 header {
     background-color: #ffb347;
     color: white;
@@ -17,6 +26,7 @@ header {
     font-weight: bold;
 }
 
+/* Navigatie */
 nav {
     background-color: #f79d65;
     display: flex;
@@ -38,12 +48,16 @@ nav a:hover {
     background-color: #ff7f50;
 }
 
+/* Container */
 .container {
     max-width: 900px;
+    width: 90%; /* Zorgt dat container meeschuift op kleinere schermen */
     margin: 30px auto;
-    padding: 0 20px;
+    padding: 20px;
+    flex: 1; /* Zorgt dat container groeit en hele scherm vult indien nodig */
 }
 
+/* Tekststijlen */
 h1, h2 {
     color: #e76f51;
 }
@@ -52,6 +66,7 @@ p {
     margin-bottom: 1em;
 }
 
+/* Buttons */
 button {
     background-color: #f79d65;
     color: white;
@@ -67,10 +82,11 @@ button:hover {
     background-color: #ff7f50;
 }
 
+/* Footer */
 footer {
     text-align: center;
     padding: 20px;
     background-color: #f79d65;
     color: white;
-    margin-top: 50px;
+    margin-top: auto; /* Zorgt dat footer onderaan het scherm blijft */
 }
